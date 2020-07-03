@@ -36,9 +36,19 @@ for (image of images)
     let caption = document.createElement("p");
     
     // Set the caption to the alt text of the image.
-    caption.innerHTML = image.getAttribute("alt");
+    caption.innerHTML = `${image.getAttribute("alt")}<br>`;
 
+    let tags = image.getAttribute("tags");
+    let tagList = tags.split(" ");
+    for (tag of tagList)
+    {
+        caption.innerHTML += `<a href="#">${tag}</a>`
+    }
+    console.log(tagList);
+
+    // Add the caption to the div.
     newDiv.appendChild(caption);
+
 }
 
 // First image on the page.
