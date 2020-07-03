@@ -44,6 +44,7 @@ main {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: rgb(215, 215, 235);
 }
 img {
     width: 300px;
