@@ -38,13 +38,16 @@ for (image of images)
     // Set the caption to the alt text of the image.
     caption.innerHTML = `${image.getAttribute("alt")}<br>`;
 
+    // Get tags attribute (full string).
     let tags = image.getAttribute("tags");
+    // Split the tags attribute on the space character, into a list of each tag.
     let tagList = tags.split(" ");
+    // For each tag...
     for (tag of tagList)
     {
+        // Create a link and append it to the caption.
         caption.innerHTML += `<a href="#">${tag}</a>`
     }
-    console.log(tagList);
 
     // Add the caption to the div.
     newDiv.appendChild(caption);
