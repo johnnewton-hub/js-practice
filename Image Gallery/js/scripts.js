@@ -68,8 +68,7 @@ for (image of images)
 
 }
 
-// First image on the page.
-let testImage = images[0];
+
 
 
 
