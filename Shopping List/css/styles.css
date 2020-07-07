@@ -41,3 +41,9 @@ ul {
 ul li {
     margin: 5px 0;
 }
+#error-output {
+    font-size: 20px;
+    margin: 10px 0;
+    color: firebrick;
+    font-weight: bold;
+}
