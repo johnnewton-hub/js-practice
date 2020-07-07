@@ -9,7 +9,7 @@
     // <ul class="empty">
     const list = document.querySelector("ul");
 
-    addButton.addEventListener("click", function()
+    addButton.addEventListener("click", () =>
         {
             console.log("Stuff has been done.");
         }
