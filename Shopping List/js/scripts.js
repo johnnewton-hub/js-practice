@@ -1,9 +1,3 @@
-function doSomeStuff()
-{
-    console.log("Stuff has been done.");
-}
-
-
 {
     console.log("Script starting!");
     // querySelector will use CSS selector syntax to select HTML elements.
@@ -15,7 +9,11 @@ function doSomeStuff()
     // <ul class="empty">
     const list = document.querySelector("ul");
 
-    addButton.addEventListener("click", doSomeStuff);
+    addButton.addEventListener("click", function()
+        {
+            console.log("Stuff has been done.");
+        }
+    );
     
 
     console.log("Script ending!");
