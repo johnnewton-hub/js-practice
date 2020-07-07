@@ -1,4 +1,43 @@
 * {
     box-sizing: border-box;
 }
-
+body {
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+.container {
+    width: 80%;
+    min-width: 400px;
+    max-width: 1200px;
+}
+h1 {
+    font-size: 32px;
+    font-weight: bolder;
+    text-decoration: underline;
+    margin: 16px 0 ;
+}
+a {
+    color: white;
+    background-color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+}
+input {
+    height: 36px;
+}
+ul.empty {
+    list-style: none;
+    padding: 0;
+}
+ul {
+    margin: 10px 0;
+    list-style: square;
+    padding: 0 20px;
+}
+ul li {
+    margin: 5px 0;
+}
