@@ -15,8 +15,8 @@
         {
             // TODO: Add Error Output to User
 
-            // Prevent Empty List Items (Including Whitespace) and Prevent Duplicate List Items
-            if (input.value.trim() !== "" && !itemArray.includes(input.value.trim()))
+            // Prevent Empty List Items (Including Whitespace) and Prevent Duplicate List Items (Case Insensitive)
+            if (input.value.trim() !== "" && !itemArray.includes(input.value.trim().toLowerCase()))
             {
                 // 1. Create a list item element.
                 let newListItem = document.createElement("li");
@@ -25,7 +25,8 @@
                 // P.S. Also removing trailing and leading whitespace.
                 newListItem.innerText = input.value.trim();
 
-                itemArray.push(input.value.trim());
+                // Convert to Lowercase for Case Insensitivity
+                itemArray.push(input.value.trim().toLowerCase());
 
                 if (list.className === "empty")
                 {
