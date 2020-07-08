@@ -8,6 +8,9 @@ body {
 .container {
     width: 960px;
 }
+.hidden {
+    display: none;
+}
 /* Header Styles */
 header {
     display: flex;
@@ -42,14 +45,25 @@ header #clear:hover {
 /* Main Styles */
 main {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
-    background-color: rgb(215, 215, 235);
+    background-color: rgb(235, 235, 255);
 }
 main div {
     border: 2px solid gray;
     width: 300px;
-    margin: 15px 0;
+    margin: 10px 10px;
+    border-radius: 5px;
+    background-color: rgb(200, 200, 220);
+}
+main div p {
+    padding: 3px;
+}
+main div a {
+    margin: 0 5px;
+}
+main div a:first-of-type {
+    margin-left: 0;
 }
 img {
     width: 100%;

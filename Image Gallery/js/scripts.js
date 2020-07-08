@@ -7,6 +7,50 @@ const searchBar = document.querySelector("#search");
 // Clear button for the search bar
 const clearButton = document.querySelector("#clear");
 
+searchBar.addEventListener("input", () => {
+    // For every image on the page
+    for (image of images)
+    {
+        // TODO: Split the query to handle multiple tags, etc.
+        // Check it's sibling paragraph for a text match with the search bar
+        let query = searchBar.value;
+        // Split the query on spaces to make sure that every "word" (tags as well) is in the description
+        let subQueries = searchBar.value.split(" ");
+
+        // Set match to true, and we'll change it to false if anything disqualifies an image
+        let match = true;
+
+        // For each of the "words"
+        for (subQuery of subQueries)
+        {
+            // If the description does not contain the "word", flag the image as not matching
+            if (!image.parentNode.querySelector("p").innerText.toLowerCase().includes(subQuery.toLowerCase()))
+            {
+                match = false;
+            }
+        }
+        // If the image is not matching.
+        if (!match)
+        {
+            // Hide it.
+            image.parentNode.classList.add("hidden");
+        }
+        // If the image is matching.
+        else 
+        {
+            // Unhide it.
+            image.parentNode.classList.remove("hidden");
+        }
+        
+    }
+});
+
+clearButton.addEventListener("click", () => {
+    searchBar.value = "";    
+    searchBar.dispatchEvent(new Event("input"));
+});
+
+
 for (image of images)
 {
     // Create a new element;
@@ -56,7 +100,10 @@ for (image of images)
             // We prevent the default behaviour from occuring (don't reload the page).
             event.preventDefault();
             // We set the value of the search bar to the tag value.
-            searchBar.setAttribute("value", tagLink.innerHTML);
+            searchBar.value = tagLink.innerHTML;
+            // Fire the input event.
+            searchBar.dispatchEvent(new Event("input"));
+
         });
 
         // We add the tag to the paragraph (caption).
