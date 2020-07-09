@@ -1,0 +1,45 @@
+<div>
+    <p>Text</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+    </ul>
+</div>
+<main>
+    <img />
+</main>
+
+document
+    Element-HTML
+        Element-body
+            Element-div
+                Element-p
+                    Text-"Text"
+                Element-ul 
+                    Element-li 
+                        Text-"1"
+                    Element-li 
+                        Text-"2"
+            Element-main
+                Element-img
+
+
+<parent>
+    <me>
+        <child>
+        </child>
+    </me>
+    <sibling>
+    </sibling>
+</parent>
+
+const me = document.querySelector("me");
+me.parentNode               // <parent>             // CSS: parent
+me.children[0]              // <child>              // CSS: me>*:first-child()
+me.parentNode.children[0]   // <me>                 // CSS: parent>*:first-child
+me.parentNode.children[1]   // <sibling>            // CSS: parent>*:nth-child(2)
+me.parentNode.children      // [<me>, <sibling>]    // CSS: parent>*
+
+me.childrem[0].children[2].children[4].children[1]
+
+me.children[me.children.length-1]
