@@ -38,3 +38,13 @@ containerDiv.appendChild(document.createElement("main"));
     </div>
 </body>
 */
+
+// Examples of using the children property.
+//containerDiv.children[1].classList.add("added-with-children");
+//containerDiv.querySelector("main").classList.add("added-with-queryselector");
+
+// Example of parent node.
+//containerDiv.parentNode.classList.add("added-with-parentnode");
+
+// parentElement of the <html> tag is null, because there is no element / tags around it (it references the html code only, not the DOM).
+// parentNode of the <html> tag is the document object because that is the root of the DOM, and parentNode references the DOM.
