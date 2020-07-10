@@ -36,6 +36,7 @@ header>div>img {
     margin: 5px;
 }
 header>div>h1 {
+    /* vertically align text */
     line-height: 60px;
 }
 
