@@ -42,7 +42,28 @@
 
                 // 2. Add the text from the text field to the list item.
                 // P.S. Also removing trailing and leading whitespace.
-                newListItem.innerText = input.value.trim();
+                newListItem.innerHTML = "<input type=\"text\" class=\"hidden\"><span>"+input.value.trim()+"</span>";
+
+                // TODO: Update the array that tracks duplicates.
+                newListItem.appendChild(document.createElement("button"));
+                newListItem.querySelector("button").innerText = "Edit";
+                newListItem.querySelector("button").addEventListener("click", () => {
+                    if (newListItem.querySelector("span").classList.contains("hidden"))
+                    {
+                        newListItem.querySelector("input").classList.add("hidden");
+                        newListItem.querySelector("span").innerText = newListItem.querySelector("input").value;
+                        newListItem.querySelector("span").classList.remove("hidden");
+                        newListItem.querySelector("button").innerText = "Edit";
+                    }
+                    else
+                    {
+                        newListItem.querySelector("span").classList.add("hidden");
+                        newListItem.querySelector("input").value = newListItem.querySelector("span").innerText;
+                        newListItem.querySelector("input").classList.remove("hidden");
+                        newListItem.querySelector("button").innerText = "Submit";
+                    }
+                    
+                });
 
                 // Convert to Lowercase for Case Insensitivity
                 itemArray.push(input.value.trim().toLowerCase());
