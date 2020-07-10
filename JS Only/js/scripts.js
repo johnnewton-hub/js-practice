@@ -48,3 +48,24 @@ containerDiv.appendChild(document.createElement("main"));
 
 // parentElement of the <html> tag is null, because there is no element / tags around it (it references the html code only, not the DOM).
 // parentNode of the <html> tag is the document object because that is the root of the DOM, and parentNode references the DOM.
+
+
+// Create the Div and Nav in the header.
+containerDiv.querySelector("header").appendChild(document.createElement("div"));
+containerDiv.querySelector("header").appendChild(document.createElement("nav"));
+
+
+// Create our logo image.
+let pageLogo = document.createElement("img");
+// Set image attributes.
+pageLogo.src = "img/logo.png";
+pageLogo.alt = "The logo for the page.";
+
+// Create our page heading.
+let pageHeading = document.createElement("h1");
+// Set heading text.
+pageHeading.innerText = "Page Heading";
+
+// Add the image and heading to the DOM.
+containerDiv.querySelector("header>div").appendChild(pageLogo);
+containerDiv.querySelector("header>div").appendChild(pageHeading);

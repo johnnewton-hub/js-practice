@@ -22,6 +22,21 @@ main {
     background-color: cyan;
     height: 200px;
 }
-.yellow {
+header>div {
     background-color: yellow;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
 }
+header>nav {
+    background-color: orange;
+    height: 40px;
+}
+header>div>img {
+    margin: 5px;
+}
+header>div>h1 {
+    line-height: 60px;
+}
+
+
