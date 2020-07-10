@@ -40,4 +40,13 @@ header>div>h1 {
     line-height: 60px;
 }
 
-
+header>nav>ul {
+    display: flex;
+    justify-content: flex-start;
+}
+header>nav>ul>li {
+    margin: 0 5px;
+}
+header>nav>ul>li>a {
+    line-height: 40px;
+}

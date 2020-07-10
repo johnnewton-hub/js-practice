@@ -54,6 +54,21 @@ containerDiv.appendChild(document.createElement("main"));
 containerDiv.querySelector("header").appendChild(document.createElement("div"));
 containerDiv.querySelector("header").appendChild(document.createElement("nav"));
 
+/*
+<body>
+    <div class="container">
+        <header>
+            <div>
+            </div>
+            <nav>
+            </nav>
+        </header>
+        <main>
+        </main>
+    </div>
+</body>
+*/
+
 
 // Create our logo image.
 let pageLogo = document.createElement("img");
@@ -70,3 +85,90 @@ pageHeading.innerText = "Page Heading";
 // Add the image and heading to the DOM.
 containerDiv.querySelector("header>div").appendChild(pageLogo);
 containerDiv.querySelector("header>div").appendChild(pageHeading);
+/*
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <img src="img/logo.png" alt="The logo for the page." />
+                <h1>Page Heading</h1>
+            </div>
+            <nav>
+            </nav>
+        </header>
+        <main>
+        </main>
+    </div>
+</body>
+*/
+
+
+// Declare the link names.
+let navLinkTexts = ["Home", "About", "Blog's Main Topic 1", "Blog's Main Topic 2", "Blog's Main Topic 3", "Associated Blogs"];
+let navLinkList = document.createElement("ul");
+containerDiv.querySelector("header>nav").appendChild(navLinkList);
+/*
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <img src="img/logo.png" alt="The logo for the page." />
+                <h1>Page Heading</h1>
+            </div>
+            <nav>
+                <ul>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        </main>
+    </div>
+</body>
+*/
+
+for (linkText of navLinkTexts)
+{
+    let newListItem = document.createElement("li");
+    let newLink = document.createElement("a");
+    newLink.href = "#";
+    newLink.innerText = linkText;
+
+    newListItem.appendChild(newLink)
+    navLinkList.appendChild(newListItem);
+}
+/*
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <img src="img/logo.png" alt="The logo for the page." />
+                <h1>Page Heading</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog's Main Topic 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog's Main Topic 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Blog's Main Topic 3</a>
+                    </li>
+                    <li>
+                        <a href="#">Associated Blogs</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        </main>
+    </div>
+</body>
+*/
