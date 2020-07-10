@@ -60,6 +60,7 @@ let pageLogo = document.createElement("img");
 // Set image attributes.
 pageLogo.src = "img/logo.png";
 pageLogo.alt = "The logo for the page.";
+// pageLogo.setAttribute("src", "img/logo.png")
 
 // Create our page heading.
 let pageHeading = document.createElement("h1");
